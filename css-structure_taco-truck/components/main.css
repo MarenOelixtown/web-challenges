@@ -1,0 +1,13 @@
+main > ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+main > h2 {
+  display: inline-block;
+  background-color: var(--main-title-bg);
+  color: var(--main-text);
+  padding: 10px;
+  margin: 0;
+}

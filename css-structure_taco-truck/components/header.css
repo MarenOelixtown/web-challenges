@@ -1,0 +1,7 @@
+h1 {
+  display: inline-block;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 20px;
+  margin: 0;
+}

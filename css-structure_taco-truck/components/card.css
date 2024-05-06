@@ -1,0 +1,15 @@
+.meal-card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  list-style: none;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+.meal-card__text--margin {
+  margin: 0;
+}
+
+.meal-card h4 {
+  font-weight: normal;
+}
