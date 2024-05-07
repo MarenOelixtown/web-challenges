@@ -7,10 +7,10 @@ button.addEventListener("click", () => {
   // Beware: input values are *always* strings!
   const age = Number(input.value);
 
-  if (age < 18) {
-    output.textContent = "You are not a teen.";
-  } else {
+  if (age > 11 && age < 18) {
     output.textContent = "You are a teen.";
+  } else {
+    output.textContent = "You are not a teen.";
   }
 
   // Exercise:
