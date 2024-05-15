@@ -45,5 +45,6 @@ form.addEventListener("submit", (event) => {
 
   // eslint-disable-next-line no-alert
   showSuccessMessage();
+  event.target.reset();
   /*  alert("Form submitted"); */
 });
