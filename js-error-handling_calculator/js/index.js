@@ -23,7 +23,6 @@ form.addEventListener("submit", (event) => {
   try {
     output.innerText = operations[operation](firstNumber, secondNumber);
   } catch (error) {
-    output.innerText =
-      "Please pass a number rather than 0 as divisor, thank you!";
+    output.innerText = error.message;
   }
 });
