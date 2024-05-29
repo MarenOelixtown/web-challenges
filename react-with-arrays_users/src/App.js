@@ -12,7 +12,6 @@ export default function App() {
         {USERS.map((user) => (
           <Card key={user.id} user={user} />
         ))}
-        <Card user={USERS[0]} />
       </div>
     </main>
   );
