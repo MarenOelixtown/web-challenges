@@ -6,7 +6,7 @@ export default function TheTwoTowers() {
   const volume = volumes.find(({ slug }) => slug === "the-two-towers");
   return (
     <div>
-      <Link href="/">All Volumes</Link>
+      <Link href="/volumes">All Volumes</Link>
       <h1>{volume.title}</h1>
       <p>{volume.description}</p>
       <ul>
@@ -21,7 +21,7 @@ export default function TheTwoTowers() {
         src={volume.cover}
         height={230}
         width={140}
-        alt="The picture of the book `${volume.title}`"
+        alt={`The picture of the book ${volume.title}`}
       />
       <br />
       <Link href="/volumes/the-fellowship-of-the-ring">
