@@ -40,15 +40,12 @@ export default function App({ Component, pageProps }) {
     );
   }
   const disabled = allLights.every((light) => !light.isOn) ? true : false;
-  console.log(disabled);
 
   const isOnList = allLights.map((light) => (light.isOn ? 1 : 0));
-  console.log(isOnList);
   const isOnSum = isOnList.reduce((a, b) => a + b);
-  console.log(isOnSum);
 
   return (
-    <Layout>
+    <Layout isDimmed={disabled}>
       <GlobalStyle />
       <Component
         {...pageProps}
