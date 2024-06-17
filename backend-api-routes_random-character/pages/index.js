@@ -16,7 +16,7 @@ export default function HomePage() {
     <div>
       <h3>Hey, I'am a random Character</h3>
       <h2>
-        My name is a {character.firstName} {character.lastName}
+        My name is {character.firstName} {character.lastName}
       </h2>
       <p>My favorite anmials are {character.favAnimal}.</p>
       <p>You find me on Twitter: {character.twitterName}</p>
