@@ -42,7 +42,7 @@ function App() {
   const [entries, setEntries] = useLocalStorageState("entries", {
     defaultValue: initialEntries,
   });
-  const [filter, setFilter] = useState("all"); // "all" or "favorites"
+  const [filter, setFilter] = useState("all"); // "all" or "favorites" --- if don't use 'useLocalStorageState' 'all' appears after refreshing
   /* const [filter, setFilter] = useLocalStorageState("filter", {
     defaultValue: "all",
   }); */ // if reloading the page, the  the last display appears...

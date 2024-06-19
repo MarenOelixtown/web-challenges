@@ -19,59 +19,51 @@ export default function VolumeDetail() {
     return null;
   }
 
-  const { title, description, cover, books } = volume;
+  const { title, description, cover, books, color } = volume;
+
+  const WrapperBackgorund = styled.div`
+    background-color: ${(props) =>
+      props.$volumeColor === color ? `${color}` : null};
+  `;
 
   return (
     <>
       <Head>
         <title>{title}</title>
       </Head>
-      <StyledLink href="/volumes">← All Volumes</StyledLink>
+      <Link href="/volumes">← All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
-      <ul>
-        {books.map(({ ordinal, title }) => (
-          <li key={title}>
-            {ordinal}: <strong>{title}</strong>
-          </li>
-        ))}
-      </ul>
-      <Image
-        src={cover}
-        alt={`Cover image of ${title}`}
-        width={140}
-        height={230}
-      />
+      <WrapperBackgorund $volumeColor={color}>
+        <ul>
+          {books.map(({ ordinal, title }) => (
+            <li key={title}>
+              {ordinal}: <strong>{title}</strong>
+            </li>
+          ))}
+        </ul>
+        <Image
+          src={cover}
+          alt={`Cover image of ${title}`}
+          width={140}
+          height={230}
+        />
+      </WrapperBackgorund>
+
       {previousVolume ? (
-        <StyledLinkWrapper>
-          <StyledLink href={`/volumes/${previousVolume.slug}`}>
+        <div>
+          <Link href={`/volumes/${previousVolume.slug}`}>
             ← Previous Volume: {previousVolume.title}
-          </StyledLink>
-        </StyledLinkWrapper>
+          </Link>
+        </div>
       ) : null}
       {nextVolume ? (
-        <StyledLinkWrapper>
-          <StyledLink href={`/volumes/${nextVolume.slug}`}>
+        <div>
+          <Link href={`/volumes/${nextVolume.slug}`}>
             Next Volume: {nextVolume.title} →
-          </StyledLink>
-        </StyledLinkWrapper>
+          </Link>
+        </div>
       ) : null}
     </>
   );
 }
-
-const StyledLink = styled(Link)`
-  background-color: grey;
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem;
-  margin: 3rem 0;
-  border-radius: 5px;
-  &:hover {
-    text-decoration: underline;
-    background-color: red;
-  }
-`;
-const StyledLinkWrapper = styled.div`
-  margin: 2rem 0;
-`;
