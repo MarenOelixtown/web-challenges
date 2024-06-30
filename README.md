@@ -1,6 +1,6 @@
 # Web Challenges @SPICED Academy/neuefische
 
-### This repository contains the practical coding tasks from the Web Development Bootcamp @SPICED Academy/neuefische, which reflect the learning content from eight weeks.
+### This repository contains practical coding tasks from the Web Development Bootcamp @SPICED Academy/neuefische, which reflect the learning content from eight weeks.
 
 ---
 > [!NOTE]
